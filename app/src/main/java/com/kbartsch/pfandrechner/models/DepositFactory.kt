@@ -18,12 +18,7 @@ class DepositFactory(private val context: Context) {
             result.add(Deposit("Bierflasche (Glas)", 0.08, getDrawableByName("bottle1"),0))
             result.add(Deposit("Glasflasche (Mehrweg)", 0.15, getDrawableByName("bottle2"),0))
             result.add(Deposit("Plastikflasche (Einweg)", 0.25, getDrawableByName("bottle3"),0))
-            result.add(Deposit("Plastikflasche (Mehrweg)", 0.15, getDrawableByName("bottle4"),0))
-            result.add(Deposit("Dose", 0.25, getDrawableByName("bottle5"),0))
-            result.add(Deposit("Joghurtglas", 0.15, getDrawableByName("bottle6"),0))
             result.add(Deposit("Bügelfasche (Glas)", 0.15, getDrawableByName("bottle7"),0))
-            result.add(Deposit("Kasten (Leer)", 1.50, getDrawableByName("crate_full"),0))
-            result.add(Deposit("Halber Kasten (leer)", 0.75, getDrawableByName("crate_half"),0))
             return result
         }
 

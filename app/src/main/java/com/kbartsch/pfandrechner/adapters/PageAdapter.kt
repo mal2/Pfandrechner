@@ -13,8 +13,8 @@ import android.widget.TextView
 /**
  * Created by adunn on 7/5/17.
  */
-class PageAdapter(fm: FragmentManager, private val context: Context, val totalItem : TextView) : FragmentPagerAdapter(fm) {
-    
+class PageAdapter(fm: FragmentManager?, private val context: Context, val totalItem: TextView) : FragmentPagerAdapter(fm) {
+
     override fun getItem(position: Int): Fragment {
         when (position) {
             0 -> return DepositListFragment.newInstance(DepositListType.All, context, totalItem)

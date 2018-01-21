@@ -18,7 +18,6 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Einweg"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -26,7 +25,7 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="In Deutschland gekaufte, pfandpflichtige Einwegflaschen sind am DPG-Logo erkennbar und mit 0,25 € bepfandet."
+            android:text="Mehr Funktionalität und Informationen gibt es in der Vollversion. "
             android:textSize="14sp" />
 
         <Space
@@ -37,15 +36,13 @@
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mehrweg"
             android:textSize="24sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="In Deutschland gelten folgende Beträge:\n\nMehrweg-Bierflaschen werden mit 0,08 € verbucht, egal ob mit 0,33 l oder 0,5 l Inhalt. Mehrweg-Bierflaschen mit Bügelverschluss haben 0,15 € Pfand, werden regional auch mit 0,25 € oder 0,50 € bepfandet.\n\nSonstige Mehrwegflaschen aus Glas oder härterem Plastik kommen auf 0,15 €. Hierzu zählen z. B. Mineralwasser, Limonade, Joghurt, Milch, Sahne, Apfelwein, Fruchtsäfte.\nMehrweg-Glasflaschen der Firma Schweppes sind mit 0,10 € bepfandet. Für 1-Liter-Weinflaschen aus Glas werden in manchen Handelsketten 0,02 € bzw. 0,03 € Pfand erhoben.\n\nAus Wikipedia Flaschenpfand" />
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 </RelativeLayout>
