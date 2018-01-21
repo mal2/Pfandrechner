@@ -2,7 +2,6 @@ package com.kbartsch.pfandrechner
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import android.support.design.widget.TabLayout
 import android.support.v4.view.ViewPager
 import android.view.Menu
@@ -10,10 +9,11 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
 import com.kbartsch.pfandrechner.adapters.PageAdapter
+import android.content.Context.INPUT_METHOD_SERVICE
 
-var totalMoney: Float = 0.0f
 
-public class MainActivity : AppCompatActivity() {
+
+class MainActivity : AppCompatActivity() {
     private var mSectionsPagerAdapter: PageAdapter? = null
 
     /**
@@ -27,7 +27,8 @@ public class MainActivity : AppCompatActivity() {
 
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
-        mSectionsPagerAdapter = PageAdapter(supportFragmentManager, this)
+        val totalItem = findViewById<TextView>(R.id.TextViewTotalMoney)
+        mSectionsPagerAdapter = PageAdapter(supportFragmentManager, this, totalItem)
 
         // Set up the ViewPager with the sections adapter.
         mViewPager = findViewById<ViewPager?>(R.id.container)
@@ -39,22 +40,6 @@ public class MainActivity : AppCompatActivity() {
         // set icons
         tabLayout.getTabAt(0)!!.setIcon(R.drawable.ic_home_24dp)
         tabLayout.getTabAt(1)!!.setIcon(R.drawable.ic_info_24dp)
-
-        val TextTotal: TextView = findViewById<TextView>(R.id.TextViewTotalMoney)
-
-        val handler: Handler = Handler()
-        handler.post(object : Runnable {
-            override fun run() {
-                // upadte textView here
-                val TextTotal: TextView = findViewById<TextView>(R.id.TextViewTotalMoney)
-                if (totalMoney == 0.0f) {
-                    TextTotal.text = "0.00 €"
-                } else {
-                    TextTotal.text = "%.2f".format(totalMoney) + " €"
-                }
-                handler.postDelayed(this, 100) // set time here to refresh textView
-            }
-        })
 
     }
 

@@ -9,4 +9,4 @@ import android.graphics.drawable.Drawable
  * Data model for a Deposit
  */
 
-class Deposit(var name: String, var price: Double, var imageFile: Drawable)
+class Deposit(var name: String, var price: Double, var imageFile: Drawable, var count: Int)

@@ -5,6 +5,7 @@ import com.kbartsch.pfandrechner.models.DepositHolder
 import android.view.LayoutInflater
 import android.widget.LinearLayout
 import android.view.ViewGroup
+import android.widget.TextView
 import com.kbartsch.pfandrechner.R
 import com.kbartsch.pfandrechner.models.Deposit
 
@@ -13,11 +14,11 @@ import com.kbartsch.pfandrechner.models.Deposit
  * Created by adunn on 7/5/17.
  */
 
-class DepositAdapter(private val deposits: ArrayList<Deposit>) : RecyclerView.Adapter<DepositHolder>() {
+class DepositAdapter(private val deposits: ArrayList<Deposit>, val totalItem: TextView) : RecyclerView.Adapter<DepositHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DepositHolder {
         val depositItem = LayoutInflater.from(parent.context).inflate(R.layout.deposit_item, parent, false) as LinearLayout
-        return DepositHolder(depositItem)
+        return DepositHolder(depositItem, totalItem, deposits)
     }
 
     override fun onBindViewHolder(holder: DepositHolder, position: Int) {
@@ -25,7 +26,7 @@ class DepositAdapter(private val deposits: ArrayList<Deposit>) : RecyclerView.Ad
     }
 
     override fun getItemCount(): Int {
-        return deposits.toArray().count();
+        return deposits.toArray().count()
     }
 
 }
