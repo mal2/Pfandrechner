@@ -9,7 +9,6 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
 import com.kbartsch.pfandrechner.adapters.PageAdapter
-import android.content.Context.INPUT_METHOD_SERVICE
 
 
 
