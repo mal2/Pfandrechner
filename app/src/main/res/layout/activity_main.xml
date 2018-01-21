@@ -28,7 +28,7 @@
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:paddingTop="10dp"
-                android:text="TextView"
+                android:text="Gesamt 0.00 €"
                 android:textAlignment="center"
                 android:textSize="24sp"
                 android:textStyle="bold" />

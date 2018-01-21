@@ -8,16 +8,16 @@ android {
     compileSdkVersion 26
     buildToolsVersion '26.0.2'
     defaultConfig {
-        applicationId "com.kbartsch.pfandrechner/home/mal2/ApkProjects/Pfandrechner/app/build/outputs/apk/debug/app-debug.apk/home/mal2/ApkProjects/Pfandrechner/app/build/outputs/apk/debug/app-debug.apk"
-        minSdkVersion 21
+        applicationId "com.kbartsch.pfandrechner"
+        minSdkVersion 16
         targetSdkVersion 26
-        versionCode 1
+        versionCode 4
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
