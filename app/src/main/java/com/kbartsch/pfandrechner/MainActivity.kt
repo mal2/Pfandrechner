@@ -43,39 +43,16 @@ class MainActivity : AppCompatActivity() {
         tabLayout.getTabAt(0)!!.setIcon(R.drawable.ic_home_24dp)
         tabLayout.getTabAt(1)!!.setIcon(R.drawable.ic_info_24dp)
 
+        MobileAds.initialize(this, "ca-app-pub-4387710844910675~2559373486")
+
         //val adView = AdView(this)
         //adView.adSize = AdSize.BANNER
-        //adView.adUnitId = "pub-4387710844910675"
-
-        MobileAds.initialize(this, "ca-app-pub-4387710844910675~2559373486")
+        //adView.adUnitId = "ca-app-pub-4387710844910675/6678102966"
 
         mAdView = findViewById(R.id.adView)
         val adRequest = AdRequest.Builder().build()
         mAdView.loadAd(adRequest)
 
-        mAdView.adListener = object: AdListener() {
-            override fun onAdLoaded() {
-                // Code to be executed when an ad finishes loading.
-            }
-
-            override fun onAdFailedToLoad(errorCode : Int) {
-                // Code to be executed when an ad request fails.
-            }
-
-            override fun onAdOpened() {
-                // Code to be executed when an ad opens an overlay that
-                // covers the screen.
-            }
-
-            override fun onAdLeftApplication() {
-                // Code to be executed when the user has left the app.
-            }
-
-            override fun onAdClosed() {
-                // Code to be executed when when the user is about to return
-                // to the app after tapping on an ad.
-            }
-        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

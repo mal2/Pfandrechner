@@ -8,11 +8,11 @@ android {
     compileSdkVersion 26
     buildToolsVersion '26.0.2'
     defaultConfig {
-        applicationId "com.kbartsch.pfandrechner"
+        applicationId "com.kbartsch.pfandrechnerFree"
         minSdkVersion 16
         targetSdkVersion 26
-        versionCode 4
-        versionName "1.0"
+        versionCode 5
+        versionName "1.1"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
@@ -36,4 +36,5 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:design:26.0.0-beta2'
     compile 'com.android.support:cardview-v7:26.0.0-beta2'
+    compile 'com.google.android.gms:play-services-ads:11.8.0'
 }

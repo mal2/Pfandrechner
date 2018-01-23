@@ -28,7 +28,7 @@ class DepositHolder(itemView: View, val totalItem: TextView, val deposits: Array
         depositVal.text = deposit.price.toString() + " €/Stk"
         itemTotal.text = "0.00 €"
         numberOfItem.minValue = 0
-        numberOfItem.maxValue = 4
+        numberOfItem.maxValue = 10
         numberOfItem.wrapSelectorWheel = false
 
         fun update(Val: Int){
